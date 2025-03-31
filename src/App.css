@@ -1,0 +1,9 @@
+.cor{color: aqua;text-align: center;display: grid;}
+
+.errar{display: grid;
+    grid-template-columns: auto 80px 80px 80px;}
+
+.errar1{display: grid;
+        grid-template-columns: 560px 80px 80px 80px;}
+
+.centro{text-align: center}
