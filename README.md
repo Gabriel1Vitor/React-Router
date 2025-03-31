@@ -2,7 +2,11 @@
 
 Um exemplo de como criar rotas no React sem usar frameworks externos. 
 
-### src/comp/Router.jsx
+### Criando sistema de rodas
+
+Crie uma pasta no src e cole o seguinte código.
+
+#### src/comp/Router.jsx
   ```
   import { useEffect, useState } from "react";
 
@@ -20,8 +24,9 @@ const Router = ({ path, component }) => {
 
 export default Router;
   ```
-
-### src/pages/pagina.jsx
+### Criando uma pagina
+Recomendo ser em uma nova pasta dentro do src.
+#### src/pages/pagina.jsx
   ```
  import React from "react";
 
@@ -34,6 +39,7 @@ const Home = () => {
 export default Home;
   ```
 
+Una-os no App.jsx  
 
 ### src/App.jsx
   ```
