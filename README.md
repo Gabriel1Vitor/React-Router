@@ -8,18 +8,19 @@ Crie uma pasta no src e cole o seguinte código.
 
 #### src/comp/Router.jsx
   ```
-  import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Router({ path, component }) {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
-  useEffect(() => {
-    const onLocationChange = () => {
-      setCurrentPath(window.location.pathname);
-    };
-    window.addEventListener("navigate", onLocationChange);
-    return () => window.removeEventListener("navigate", onLocationChange);
-  }, []);
-  return currentPath === path ? component() : null;
+    const [currentPath, setCurrentPath] = useState(window.location.pathname);
+    useEffect(() => {
+      const onLocationChange = () => {
+        setCurrentPath(window.location.pathname);
+      };
+      window.addEventListener("navigate", onLocationChange);
+      return () => window.removeEventListener("navigate", onLocationChange);
+      }, []);
+
+    return currentPath === path ? component() : null;
 };
 
 export default Router;
@@ -28,13 +29,15 @@ export default Router;
 Recomendo ser em uma nova pasta dentro do src.
 #### src/pages/pagina.jsx
   ```
- import React from "react";
+import React from "react";
 
 function Home() {
-  return (<>
-  <h1 class="cor">Home inicial</h1>
-  <a href="http://localhost:5173/"> Home </a>    
-  </>)};
+  return (
+    <>
+      <h1 class="cor">Home inicial</h1>
+      <a href="http://localhost:5173/"> Home </a>    
+    </>
+  )};
 
 export default Home;
   ```
