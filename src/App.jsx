@@ -7,7 +7,7 @@ import About from "./pages/pagina-2";
 import Contacts from "./pages/pagina-3";
 
 
-const App = () => {
+function App() {
   return (
     <>
          

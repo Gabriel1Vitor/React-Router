@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Router = ({ path, component }) => {
+function Router({ path, component }) {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
   useEffect(() => {
     const onLocationChange = () => {
