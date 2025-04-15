@@ -10,7 +10,7 @@ Crie uma pasta no src e cole o seguinte código.
   ```
   import { useEffect, useState } from "react";
 
-const Router = ({ path, component }) => {
+function Router({ path, component }) {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
   useEffect(() => {
     const onLocationChange = () => {
@@ -30,7 +30,7 @@ Recomendo ser em uma nova pasta dentro do src.
   ```
  import React from "react";
 
-const Home = () => {
+function Home() {
   return (<>
   <h1 class="cor">Home inicial</h1>
   <a href="http://localhost:5173/"> Home </a>    
@@ -49,7 +49,7 @@ import Route from "./comp/Route";
 import Home from "./pages/pagina";
 
 
-const App = () => {
+function App() {
   return (
     <>
       <Route path="/" component={Home} />    
